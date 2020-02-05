@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if status == True %}
+        <p>Activity: <span style="padding:5px" class="badge badge-pill badge-danger">
+            &nbsp;{{ output }}&nbsp;</span></p>
+    {% else %}
+        <p>Activity: <span style="padding:5px" class="badge badge-pill badge-success">
+            &nbsp;{{ output }}&nbsp;</span></p>
+    {% endif %}
+    <p><a style="font-size:14px" href="{{ url_for('har') }}">Classify Another Activity</a></p>
+{% endblock %}

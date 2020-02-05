@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2>HAR Raw Data Submission for Classification</h2>
+    </br>
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            <strong>{{ form.raw_data.label }}</strong><br>
+            {{ form.raw_data() }}
+        </p>
+        <p>{{ form.submit() }}</p>
+    </form>
+{% endblock %}
